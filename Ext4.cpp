@@ -47,10 +47,9 @@ static char MKEXT4FS_PATH[] = HELPER_PATH "make_ext4fs";
 static char MKE2FS_PATH[] = HELPER_PATH "mke2fs";
 
 int Ext4::doMount(const char *fsPath, const char *mountPoint, bool ro, bool remount,
-        bool executable, bool sdcard) {
+        bool executable) {
     int rc;
     unsigned long flags;
-    const char *data = NULL;
 
     flags = MS_NOATIME | MS_NODEV | MS_NOSUID | MS_DIRSYNC;
 
